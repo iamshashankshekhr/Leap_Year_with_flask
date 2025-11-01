@@ -1,74 +1,114 @@
-# Leap Year Checker
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+</p>
 
-A simple web application built with Flask to check if a given year is a leap year.
+<h3 align="center">Project Title</h3>
 
-## Features
+<div align="center">
 
-*   User-friendly interface to input a year.
-*   Displays whether the entered year is a leap year or not.
-*   Basic styling for a clean look.
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-## Setup and Run
+</div>
 
-Follow these steps to get the application up and running on your local machine.
+---
 
-### 1. Clone the Repository (if applicable)
+<p align="center"> Few lines describing your project.
+    <br> 
+</p>
 
-If this project is part of a larger repository, navigate to the `leap_year_app` directory.
+## 📝 Table of Contents
 
-### 2. Navigate to the Project Directory
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [TODO](../TODO.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
 
-```bash
-cd leap_year_app
-```
+## 🧐 About <a name = "about"></a>
 
-### 3. Create and Activate a Virtual Environment
+Write about 1-2 paragraphs describing the purpose of your project.
 
-It's recommended to use a virtual environment to manage project dependencies.
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-### 4. Install Dependencies
+### Prerequisites
 
-Install the required Python packages using `pip`:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 5. Run the Application
-
-Start the Flask development server:
-
-```bash
-python app.py
-```
-
-### 6. Access the Application
-
-Open your web browser and navigate to:
-
-[http://127.0.0.1:5000/](http://127.0.0.1:5000/)
-
-You should now see the Leap Year Checker interface.
-
-## How to Use
-
-1.  Enter a year in the input field.
-2.  Click the "Check" button.
-3.  The application will display whether the entered year is a leap year or not.
-4.  You can click "Check another year" to return to the input page.
-
-## Project Structure
+What things you need to install the software and how to install them.
 
 ```
-leap_year_app/
-├── venv/                   # Python virtual environment
-├── app.py                  # Main Flask application
-├── requirements.txt        # Python dependencies
-└── templates/
-    ├── index.html          # Input form for the year
-    └── result.html         # Displays the leap year result
+Give examples
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running.
+
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo.
+
+## 🔧 Running the tests <a name = "tests"></a>
+
+Explain how to run the automated tests for this system.
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## 🎈 Usage <a name="usage"></a>
+
+Add notes about how to use the system.
+
+## 🚀 Deployment <a name = "deployment"></a>
+
+Add additional notes about how to deploy this on a live system.
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Express](https://expressjs.com/) - Server Framework
+- [VueJs](https://vuejs.org/) - Web Framework
+- [NodeJs](https://nodejs.org/en/) - Server Environment
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+
+See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- References
