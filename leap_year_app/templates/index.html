@@ -62,6 +62,47 @@
         {% if error %}
             <p class="error">{{ error }}</p>
         {% endif %}
+        <div id="timer">
+            <h2>Next Leap Year Countdown</h2>
+            <p id="countdown"></p>
+        </div>
+        <div id="next-day-timer">
+            <h2>Time Until Next Day</h2>
+            <p id="next-day-countdown"></p>
+        </div>
+        <script>
+            function updateLeapYearTimer() {
+                fetch('/next_leap_year')
+                    .then(response => response.json())
+                    .then(data => {
+                        const remainingSeconds = data.remaining_seconds;
+                        const days = Math.floor(remainingSeconds / (3600 * 24));
+                        const hours = Math.floor((remainingSeconds % (3600 * 24)) / 3600);
+                        const minutes = Math.floor((remainingSeconds % 3600) / 60);
+                        const seconds = Math.floor(remainingSeconds % 60);
+                        document.getElementById('countdown').innerText =
+                            `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    });
+            }
+
+            function updateNextDayTimer() {
+                fetch('/time_until_next_day')
+                    .then(response => response.json())
+                    .then(data => {
+                        const remainingSeconds = data.remaining_seconds;
+                        const hours = Math.floor(remainingSeconds / 3600);
+                        const minutes = Math.floor((remainingSeconds % 3600) / 60);
+                        const seconds = Math.floor(remainingSeconds % 60);
+                        document.getElementById('next-day-countdown').innerText =
+                            `${hours}h ${minutes}m ${seconds}s`;
+                    });
+            }
+
+            setInterval(updateLeapYearTimer, 1000);
+            setInterval(updateNextDayTimer, 1000);
+            updateLeapYearTimer();
+            updateNextDayTimer();
+        </script>
     </div>
 </body>
 </html>
