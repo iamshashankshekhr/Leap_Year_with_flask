@@ -66,9 +66,9 @@
             <h2>Next Leap Year Countdown</h2>
             <p id="countdown"></p>
         </div>
-        <div id="next-day-timer">
-            <h2>Time Until Next Day</h2>
-            <p id="next-day-countdown"></p>
+        <div id="today-date-container">
+            <h2>Today's Date</h2>
+            <p id="today-date"></p>
         </div>
         <script>
             function updateLeapYearTimer() {
@@ -85,23 +85,18 @@
                     });
             }
 
-            function updateNextDayTimer() {
-                fetch('/time_until_next_day')
+            function updateTodayDate() {
+                fetch('/today')
                     .then(response => response.json())
                     .then(data => {
-                        const remainingSeconds = data.remaining_seconds;
-                        const hours = Math.floor(remainingSeconds / 3600);
-                        const minutes = Math.floor((remainingSeconds % 3600) / 60);
-                        const seconds = Math.floor(remainingSeconds % 60);
-                        document.getElementById('next-day-countdown').innerText =
-                            `${hours}h ${minutes}m ${seconds}s`;
+                        document.getElementById('today-date').innerText = data.today_date;
                     });
             }
 
             setInterval(updateLeapYearTimer, 1000);
-            setInterval(updateNextDayTimer, 1000);
+            setInterval(updateTodayDate, 1000);
             updateLeapYearTimer();
-            updateNextDayTimer();
+            updateTodayDate();
         </script>
     </div>
 </body>

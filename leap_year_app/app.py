@@ -27,14 +27,13 @@ def next_leap_year():
         'remaining_seconds': remaining
     })
 
-@app.route('/time_until_next_day')
-def time_until_next_day():
-    """Returns the time remaining until the start of the next day."""
+
+@app.route('/today')
+def today():
+    """Returns the current date."""
     now = datetime.now()
-    tomorrow = now.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
-    remaining = int((tomorrow - now).total_seconds())
     return jsonify({
-        'remaining_seconds': remaining
+        'today_date': now.strftime('%Y-%m-%d')
     })
 
 
