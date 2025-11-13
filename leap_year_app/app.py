@@ -38,6 +38,15 @@ def time_until_next_day():
     })
 
 
+@app.route('/today')
+def today():
+    """Returns the current date."""
+    now = datetime.now()
+    return jsonify({
+        'today_date': now.strftime('%Y-%m-%d')
+    })
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
